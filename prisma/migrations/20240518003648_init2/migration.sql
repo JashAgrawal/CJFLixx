@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "WatchHistory" ADD COLUMN     "isCompleted" BOOLEAN NOT NULL DEFAULT false,
+ALTER COLUMN "media_id" DROP NOT NULL,
+ALTER COLUMN "media_id" SET DATA TYPE TEXT;

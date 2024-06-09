@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model WatchHistory {
+id String @id @default(uuid())
+userId String 
+poster_path String?
+title String?
+media_type MediaTypes @default(movie) 
+season_number String?
+episode_number String?
+media_id String?
+serverWatchedAt String? @default("0") 
+isCompleted Boolean @default(false)
+watched_at DateTime @default(now())
+}
+
+
+enum MediaTypes {
+  movie
+  tv
+}
