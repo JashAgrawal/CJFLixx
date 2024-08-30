@@ -20,6 +20,13 @@ export const servers = [
   {
     name: "Server 3",
     getter: (type: string, id: string, ss?: string, ep?: string) =>
+      `https://vidsrc.icu/embed/${type}/${id}${
+        type == "tv" ? `/${ss || 1}/${ep || 1}` : ""
+      }`,
+  },
+  {
+    name: "Server 4",
+    getter: (type: string, id: string, ss?: string, ep?: string) =>
       `https://vidsrc.in/embed/${type}?tmdb=${id}${
         type == "tv" ? `&season=${ss || 1}&episode=${ep || 1}` : ""
       }`,
