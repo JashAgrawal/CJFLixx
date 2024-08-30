@@ -30,7 +30,12 @@ const VideoPlayer = async ({
             ep={currEpisode}
           />
         )}
-        {/* <PlayerWrapper id={id} type={type} currSeason={currSeason} currEpisode={currEpisode}/> */}
+        <PlayerWrapper
+          id={id}
+          type={type}
+          currSeason={currSeason}
+          currEpisode={currEpisode}
+        />
       </div>
       <VideoDetails type={type} id={id} showPlayButton={false} />
     </div>
