@@ -22,14 +22,16 @@ const VideoPlayer = async ({
   return (
     <div className="w-full flex flex-col md:space-y-12 space-y-6 py-6 md:py-12 mt-10">
       <div className="flex md:space-x-4 max-md:flex-col-reverse max-md:space-y-4 px-4 md:px-16">
-        {type == "tv" && (
-          <EpisodePicker
-            seasons={media.seasons}
-            id={id}
-            ss={currSeason}
-            ep={currEpisode}
-          />
-        )}
+        <div className="md:max-w-1/3">
+          {type == "tv" && (
+            <EpisodePicker
+              seasons={media.seasons}
+              id={id}
+              ss={currSeason}
+              ep={currEpisode}
+            />
+          )}
+        </div>
         <PlayerWrapper
           id={id}
           type={type}
