@@ -118,7 +118,7 @@ const EpisodePicker = ({
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-5 md:grid-cols-1 max-h-[30vh] md:max-h-[76vh] md:min-h-[76vh] overflow-y-auto px-4">
+      <div className="grid md:grid-cols-1 max-h-[30vh] md:max-h-[76vh] md:min-h-[76vh] overflow-y-auto px-4">
         {episodes.map((episode: any, ei) => (
           <div
             ref={
@@ -136,7 +136,7 @@ const EpisodePicker = ({
             }`}
             // style={{ backgroundColor: ((`${ei + 1}` == currEpisode) && (`${si + 1}` == currSeason)) ? "red" : "black" }}
           >
-            <span className="max-md:hidden">{episode.name}</span>
+            <span className="">{episode.name}</span>
           </div>
         ))}
       </div>
