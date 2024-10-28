@@ -5,6 +5,8 @@ import TMDB_Api_Service from "@/services/tmdbClient";
 import { objToQueryParams } from "@/lib/utils";
 import SectionHeading from "../common/sectionHeading";
 
+export const revalidate = 24 * 60 * 60;
+
 const HorizontalScroller = async ({
   heading,
   type,
@@ -33,7 +35,7 @@ const HorizontalScroller = async ({
   }
   return (
     <div className="w-full px-2 md:px-8">
-     <SectionHeading heading={heading}/>
+      <SectionHeading heading={heading} />
       <MovieHistory movies={data} type={type} />
     </div>
   );
