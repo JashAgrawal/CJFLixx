@@ -87,7 +87,7 @@ const PlayerComp = ({
           ref={iframeRef}
           id="iframeee"
           src={activeUrl}
-          allow="fullscreen"
+          // allow="fullscreen"
           // onClick={handleClick}
           className={`w-full h-full min-h-[30vh] md:min-h-[80vh] rounded-lg ${
             isMobileScreenLandscape ? "min-h-[80vh]" : ""
@@ -95,7 +95,7 @@ const PlayerComp = ({
           width={"100%"}
           height={"100%"}
           referrerPolicy="origin"
-          frameBorder={0}
+          // scrolling="no"
           allowFullScreen
           // sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
         />
