@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const fetchFromAPI = async <T>(url: string): Promise<T> => {
+const fetchFromAPI = async <T>(url: string): Promise<T> => {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
