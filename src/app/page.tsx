@@ -3,6 +3,7 @@ import HorizontalScroller from "@/components/home/hindi";
 import HistoryList from "@/components/home/historyList";
 import Section from "@/components/home/section";
 import TrendingAll from "@/components/home/trendingAll";
+import NewVersionModal from "@/components/home/NewVersionModal";
 import TMDB_Api_Service from "@/services/tmdbClient"
 
 export default async function Home() {
@@ -10,6 +11,7 @@ export default async function Home() {
   const movies = res.data.results;
   return (
     <div className="flex flex-col items-center ">
+      <NewVersionModal />
       <NowPlaying/>
       <TrendingAll/>
       <HistoryList/>

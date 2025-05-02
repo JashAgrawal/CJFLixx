@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "swiper/css";
 import { NavigationMenuDemo } from "@/components/common/Navbar";
 import Footer from "@/components/common/footer";
+import VersionBanner from "@/components/common/VersionBanner";
 import Image from "next/image";
 import bg from "@/assets/gradient.png";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -36,6 +37,7 @@ export default function RootLayout({
         <NavigationMenuDemo />
         {children}
         <Footer />
+        <VersionBanner />
       </body>
       <GoogleAnalytics gaId="G-TCLGGKQDZK" />
     </html>
