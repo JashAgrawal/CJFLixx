@@ -39,7 +39,7 @@ const NewVersionModal = () => {
         <DialogHeader className="p-6 pb-2">
           <DialogTitle className="text-2xl font-bold text-white">Check Out Our New Website!</DialogTitle>
           <DialogDescription className="text-gray-300 text-base">
-            We've launched a new version with improved features and design.
+            We have launched a new version with improved features and design.
           </DialogDescription>
           
         </DialogHeader>
